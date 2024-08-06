@@ -1,13 +1,20 @@
 import React from "react";
 
-function Transaction() {
+function Transaction({items}) {
+const displayItems=items.map((item)=>{
+return(
+  <tr key={item.id}>
+  <td>{item.date}</td>
+  <td>{item.description}</td>
+  <td>{item.category}</td>
+  <td>{item.amount}</td>
+</tr>
+)
+})
   return (
-    <tr>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-    </tr>
+    <>
+  {displayItems} 
+  </>
   );
 }
 
