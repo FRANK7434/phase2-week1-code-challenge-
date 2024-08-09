@@ -34,7 +34,7 @@ function AccountContainer() {
       date: event.target.date.value,
       description: event.target.description.value,
       category: event.target.category.value,
-      amount: event.target.amount.value,
+      amount: parseInt(event.target.amount.value),
       id:items.length+1
     }
     let updatedDataObject = [...items, dataObject];
